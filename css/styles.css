@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* utils */
 
 body::-webkit-scrollbar {
@@ -11,6 +18,9 @@ html {
 body {
   background-color: black;
   color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   position: relative;
 }
@@ -85,11 +95,27 @@ p {
   z-index: 3;
   visibility: visible;
   opacity: 100;
+  -webkit-animation-name: bgAnimation;
   animation-name: bgAnimation;
+  -webkit-animation-duration: 1000ms;
   animation-duration: 1000ms;
+  -webkit-animation-delay: 1500ms;
   animation-delay: 1500ms;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bgAnimation {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
 }
 
 @keyframes bgAnimation {
@@ -110,10 +136,24 @@ p {
   left: 0;
   border-bottom: 1px white solid;
   z-index: 3;
+  -webkit-animation-name: lineStartAnimation;
   animation-name: lineStartAnimation;
+  -webkit-animation-duration: 1500ms;
   animation-duration: 1500ms;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes lineStartAnimation {
+  0% {
+    width: 0vw;
+  }
+
+  100% {
+    width: 100vw;
+  }
 }
 
 @keyframes lineStartAnimation {
@@ -175,6 +215,8 @@ p {
 .logo {
   width: 40px;
   height: 40px;
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg)
+    brightness(103%) contrast(104%);
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg)
     brightness(103%) contrast(104%);
 }
@@ -188,7 +230,11 @@ p {
 /* header-nav */
 
 .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -200,7 +246,11 @@ p {
 .nav--item__hover {
   color: white;
   border-bottom: 1px solid black;
+  -webkit-transition-property: border-bottom;
+  -o-transition-property: border-bottom;
   transition-property: border-bottom;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 
@@ -213,8 +263,14 @@ p {
   max-width: 1280px;
   margin: 0 auto;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -263,6 +319,8 @@ p {
 }
 
 .links-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -273,7 +331,11 @@ p {
 
 .link-item-linkedin {
   background-color: black;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
   transition-property: background-color;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 
@@ -284,7 +346,11 @@ p {
 
 .link-item-github {
   background-color: black;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
   transition-property: background-color;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 
@@ -295,7 +361,11 @@ p {
 
 .link-item-gmail {
   background-color: black;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
   transition-property: background-color;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 
@@ -306,7 +376,11 @@ p {
 
 .link-item-telegram {
   background-color: black;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
   transition-property: background-color;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 
@@ -323,6 +397,8 @@ p {
   width: 45px;
   height: 45px;
   border-radius: 100%;
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg)
+    brightness(103%) contrast(104%);
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg)
     brightness(103%) contrast(104%);
   z-index: 1;
@@ -331,11 +407,15 @@ p {
 .arrowDown {
   width: 15px;
   height: 15px;
+  -webkit-filter: invert(0%) sepia(98%) saturate(4%) hue-rotate(137deg)
+    brightness(96%) contrast(100%);
   filter: invert(0%) sepia(98%) saturate(4%) hue-rotate(137deg) brightness(96%)
     contrast(100%);
 }
 
 .arrowLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   margin-top: 200px;
@@ -343,9 +423,17 @@ p {
   height: 45px;
   border-radius: 100%;
   background-color: white;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
   transition-property: background-color;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 
@@ -357,6 +445,8 @@ p {
 /* expSection */
 
 .cardOfExamples {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -380,11 +470,17 @@ p {
 .linkToExample {
   width: 45px;
   height: 45px;
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg)
+    brightness(103%) contrast(104%);
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg)
     brightness(103%) contrast(104%);
   border-radius: 100%;
   border: none;
+  -webkit-transition-property: border;
+  -o-transition-property: border;
   transition-property: border;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
   padding: 7px;
 }
@@ -431,20 +527,30 @@ p {
 /* aboutSection */
 
 .aboutInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .aboutLogo {
   width: 200px;
   margin-left: 50px;
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg)
+    brightness(103%) contrast(104%);
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg)
     brightness(103%) contrast(104%);
 }
 
 .aboutText {
   max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 200px;
   margin-left: 75px;
@@ -464,8 +570,15 @@ p {
 /* footer */
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
   user-select: text;
   margin-bottom: 50px;
 }
