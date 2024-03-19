@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>markup</title>
+    <title>Resume</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link
       rel="stylesheet"
@@ -37,15 +37,15 @@
           </li>
 
           <li class="nav-item">
-            <a href="#exp" class="nav--item__hover">Experience</a>
-          </li>
-
-          <li class="nav-item">
             <a href="#about" class="nav--item__hover">About</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav--item__hover">Contacts</a>
+            <a href="#exp" class="nav--item__hover">Experience</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#contacts" class="nav--item__hover">Contacts</a>
           </li>
         </ul>
       </div>
@@ -96,7 +96,7 @@
         </ul>
       </section>
 
-      <a href="#exp" class="arrowLink">
+      <a href="#exp" id="about" class="arrowLink">
         <img
           class="arrowDown"
           src="./util/svg/arrowDown.svg"
@@ -104,7 +104,25 @@
         />
       </a>
 
-      <section id="exp" class="expSection">
+      <section class="about">
+        <h1 class="title">About</h1>
+
+        <div class="aboutInfo">
+          <img src="./util/logo/logo.svg" alt="Logo" class="aboutLogo" />
+          <p class="aboutText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            quia aut iste, quo eveniet quibusdam blanditiis sunt a eos amet
+            laudantium repellat id ut cupiditate mollitia consectetur atque
+            voluptatem ipsum. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Dolores reprehenderit hic nemo ullam adipisci consequatur!
+            Animi sint, molestias vero recusandae ducimus, quibusdam incidunt
+            quasi corrupti dolores cupiditate dolore quaerat quam, unde tempora
+            repellendus!
+          </p>
+        </div>
+      </section>
+
+      <section class="expSection">
         <h1 class="title">Experience</h1>
 
         <ul class="listOfExampes">
@@ -124,13 +142,14 @@
                     class="linkToExample"
                     src="./util/svg/link.svg"
                     alt="PizzaTime"
+                    id="about"
                   />
                 </a>
               </div>
             </div>
           </li>
 
-          <li class="itemOfExamples">
+          <!-- <li class="itemOfExamples">
             <div class="cardOfExamples">
               <img
                 class="imageOfCard"
@@ -149,30 +168,12 @@
                 </a>
               </div>
             </div>
-          </li>
+          </li> -->
         </ul>
       </section>
 
-      <section class="about" id="about">
-        <h1 class="title">About</h1>
-
-        <div class="aboutInfo">
-          <img src="./util/logo/logo.svg" alt="Logo" class="aboutLogo" />
-          <p class="aboutText">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            quia aut iste, quo eveniet quibusdam blanditiis sunt a eos amet
-            laudantium repellat id ut cupiditate mollitia consectetur atque
-            voluptatem ipsum. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Dolores reprehenderit hic nemo ullam adipisci consequatur!
-            Animi sint, molestias vero recusandae ducimus, quibusdam incidunt
-            quasi corrupti dolores cupiditate dolore quaerat quam, unde tempora
-            repellendus!
-          </p>
-        </div>
-      </section>
-
       <footer>
-        <h1 class="title">Contacts</h1>
+        <h1 id="contacts" class="title">Contacts</h1>
 
         <div class="footer">
           <ul class="contactNumMail">
