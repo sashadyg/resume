@@ -584,6 +584,19 @@ p {
   margin-bottom: 50px;
 }
 
+.footerLink {
+  color: white;
+  border-bottom: 1px solid black;
+  transition-property: border-bottom;
+  transition-duration: 300ms;
+  line-height: 1.5;
+}
+
+.footerLink:hover,
+.footerLink:focus {
+  border-bottom: 1px solid white;
+}
+
 @media (max-width: 767px) {
   .contactNumMail {
     display: none;
