@@ -562,6 +562,23 @@ p {
   margin-left: 75px;
 }
 
+.about__skills-list {
+  display: flex;
+  justify-content: center;
+}
+
+.skills-list__item:not(.skills-list__item:last-child) {
+  margin-right: 30px;
+}
+
+.skills-item__text {
+  font-size: larger;
+}
+
+.skills-item__text--decoration {
+  margin-left: 30px;
+}
+
 @media (max-width: 1000px) {
   .about__logo {
     display: none;
